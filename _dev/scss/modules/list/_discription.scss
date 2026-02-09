@@ -1,0 +1,47 @@
+@use '../../base/' as *;
+
+.list-discription {
+  margin-block-start: 24px;
+  display: grid;
+  gap: 8px;
+}
+
+.list-discription__title {
+  font-weight: var(--FONT_WEIGHT_BOLD);
+  color: var(--COLOR_ACCENT);
+  padding-inline-start: calc(6px + 8px);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: var(--COLOR_ACCENT);
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    top: .6em;
+    left: 0;
+  }
+}
+
+.list-discription__text {
+  font-weight: var(--FONT_WEIGHT_BOLD);
+}
+
+@media(768px <= width) {
+  .list-discription__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+  }
+  
+  .list-discription__title {
+    padding-inline-start: calc(12px + 8px);
+
+    &::after {
+      width: 12px;
+      height: 12px;
+      top: .55em;
+    }
+  }
+}

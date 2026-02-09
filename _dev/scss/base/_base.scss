@@ -1,0 +1,90 @@
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 58px;
+}
+
+head noscript {
+  display: none;
+}
+
+body {
+  background-color: #fff;
+  color: var(--COLOR_BASE);
+  font-family: var(--FONT_FAMILY);
+  font-size: var(--FONT_SIZE);
+  font-weight: var(--FONT_WEIGHT);
+  line-height: var(--LINE_HEIGHT);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-break: strict;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+body:has(.l-header.is-open).is-fixed {
+  height: 100%;
+  overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6,p,ol,ul,dl,dt,dd,button,figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul,ol,li {
+  list-style: none;
+}
+
+b,em {
+  font-style: normal;
+  font-weight: var(--FONT_WEIGHT_BOLD);
+}
+
+a {
+  color: currentColor;
+
+  &:where(img) {
+    pointer-events: none;
+  }
+}
+
+@media(768px <= width) {
+  html {
+    scroll-padding-top: 99px;
+  }
+}
+
+img,svg {
+  height: auto;
+  max-width: 100%;
+  width: auto;
+  vertical-align: bottom;
+}
+
+::placeholder {
+  opacity: 1;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  background: unset;
+}

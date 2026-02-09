@@ -1,0 +1,52 @@
+@use '../../base/' as *;
+
+.layout-movie {
+  margin-block-start: var(--MARGIN_MODULES);
+  display: grid;
+  justify-content: center;
+  gap: 16px;
+}
+
+.layout-movie__item {
+  transition: opacity var(--TRANSITION);
+
+  > :first-child {
+    margin-block-start: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: var(--OPACITY);
+  }
+}
+
+.layout-movie__thumb {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-image: url('/lacrosse/common/img/icon-play.svg');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--COLOR_WHITE);
+    border: 1px solid var(--COLOR_ACCENT);
+    border-radius: 50%;
+    background-position: center left 13px;
+  }
+}
+
+.layout-movie__thumbItem {
+  border-radius: var(--ROUND);
+  object-fit: cover;
+}
+
+@media(768px <= width) {
+  .layout-movie {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

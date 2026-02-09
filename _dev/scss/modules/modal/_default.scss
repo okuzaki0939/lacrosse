@@ -1,0 +1,82 @@
+@use '../../base/' as *;
+
+.modal {
+  border: none;
+  padding-block: 0;
+  padding-inline: 0;
+  width: calc(100% - 32px);
+  overflow: visible;
+
+  &::backdrop {
+    background-color: rgb(51 51 51 / .6);
+    backdrop-filter: blur(3px);
+  }
+}
+
+.modal__closeButton {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 1px;
+    background-color: var(--COLOR_WHITE);
+    top: 50%;
+    left: 50%;
+  }
+
+  &::before {
+    transform: translate(-50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%) rotate(135deg);
+  }
+}
+
+.modal__closeText {
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.modal__wrapper {
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.modal__inner {
+  >:first-child {
+    margin-block-start: 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .modal {
+    max-width: 800px;
+  }
+
+  .modal__closeButton {
+    top: calc(-48px - 8px);
+    width: 48px;
+    height: 48px;
+  
+    &::before,
+    &::after {
+      width: 40px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use '../../base/' as *;
+
+// HEADING
+.heading-lv2 {
+  font-size: 3.2rem;
+  font-weight: 400;
+  font-family: var(--FONT_FAMILY_SUB);
+  line-height: var(--LINE_HEIGHT_HEADING);
+  text-align: center;
+  color: var(--COLOR_BASE);
+
+  &::first-letter {
+    color: var(--COLOR_ACCENT);
+  }
+
+  &--white {
+    color: var(--COLOR_WHITE);
+
+    &::first-letter {
+      color: var(--COLOR_WHITE);
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .heading-lv2 {
+    font-size: 6.4rem;
+  }
+}

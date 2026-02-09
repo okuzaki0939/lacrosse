@@ -1,0 +1,25 @@
+@use '../../base/' as *;
+
+.text {
+  margin-block-start: var(--MARGIN_MODULES);
+
+  & + & {
+    margin-block-start: 16px;
+  }
+
+  &--white {
+    color: var(--COLOR_WHITE);
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.text__item {
+  font-weight: var(--FONT_WEIGHT_BOLD);
+
+  .inline-block {
+    display: inline-block;
+  }
+}

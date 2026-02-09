@@ -1,0 +1,20 @@
+@use '../../base/' as *;
+
+.layout-media {
+  margin-block-start: var(--MARGIN_MODULES);
+  display: grid;
+  justify-content: center;
+  gap: 16px;
+}
+
+.layout-media__item {
+  > :first-child {
+    margin-block-start: 0;
+  }
+}
+
+@media(768px <= width) {
+  .layout-media {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

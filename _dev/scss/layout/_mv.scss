@@ -1,0 +1,114 @@
+@use '../base/' as *;
+
+.top-mv__inner {
+  position: relative;
+  padding-inline: var(--CONTENT_PADDING_INLINE);
+}
+
+.top-mv__content {
+  position: absolute;
+  bottom: 16px;
+  z-index: var(--ZINDEX_LAYER1);
+}
+
+.top-mv__message {
+  font-size: 2.4rem;
+  font-weight: var(--FONT_WEIGHT_BOLD);
+  line-height: var(--LINE_HEIGHT_HEADING);
+  color: var(--COLOR_WHITE);
+  filter: drop-shadow(8px 8px 8px rgb(0, 0, 0 / .5));
+}
+
+.top-mv__carousel {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+
+.top-mv__carouselSlider {
+  position: relative;
+}
+
+.top-mv__carouselMedia {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.top-mv__carouselToggle {
+  position: absolute;
+  content: '';
+  bottom: 16px;
+  right: var(--CONTENT_PADDING_INLINE);
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255 255 255 / .6);
+  backdrop-filter: blur(8px);
+  border-radius: 4px;
+  display: grid;
+}
+
+.top-mv__carouselToggleIcon {
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+
+  &--play {
+    background-image: url('/lacrosse/common/img/icon-play.svg');
+    position: relative;
+    left: 2px;
+  }
+
+  &--pause {
+    background-image: url('/lacrosse/common/img/icon-pause.svg');
+  }
+}
+
+.top-mv__carouselToggleText {
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+@media(768px <= width < 1024px) {
+  .top-mv__content {
+    bottom: 32px;
+  }
+
+  .top-mv__message {
+    font-size: 4rem;
+  }
+
+  .top-mv__carouselToggle {
+    bottom: 32px;
+  }
+}
+
+@media(width >= 1024px) {
+  .top-mv {
+    max-height: 760px
+  }
+
+  .top-mv__content {
+    bottom: 64px;
+  }
+
+  .top-mv__message {
+    font-size: 6.4rem;
+  }
+
+  .top-mv__carouselMedia {
+    max-height: 760px
+  }
+
+  .top-mv__carouselToggle {
+    bottom: 64px;
+  }
+}

@@ -1,0 +1,37 @@
+@use '../../base/' as *;
+
+// heading-lv3
+.heading-lv3 {
+  margin-block-start: 32px;
+  text-align: center;
+}
+
+.heading-lv3__item {
+  font-size: 2.4rem;
+  font-family: var(--FONT_FAMILY_SUB);
+  font-weight: 400;
+  line-height: var(--LINE_HEIGHT_HEADING);
+  color: var(--COLOR_BASE);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: calc(100% + 16px);
+    height: 4px;
+    background: linear-gradient(90deg, #005931 0%, #00bf69 100%);
+    transform: skewX(-35deg);
+    bottom: 0;
+    left: -8px;
+  }
+}
+
+@media(768px <= width) {
+  .heading-lv3 {
+    margin-block-start: 48px;
+  }
+
+  .heading-lv3__item {
+    font-size: 4.8rem;
+  }
+}

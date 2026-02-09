@@ -1,0 +1,22 @@
+@use '../base/' as *;
+
+.footer {
+  position: relative;
+  top: -1px;
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--CONTENT_WIDTH_SP), var(--CONTENT_WIDTH_PC)) 1fr;
+  padding-block: 16px;
+  gap: var(--CONTENT_PADDING_INLINE);
+  background-color: #002F1A;
+}
+
+.footer__inner {
+  display: grid;
+  grid-column: 2 / 3;
+}
+
+.footer__copy {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--COLOR_WHITE);
+}

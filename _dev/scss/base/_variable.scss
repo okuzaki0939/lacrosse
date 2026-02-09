@@ -1,0 +1,50 @@
+:root {
+  --COLOR_BASE: #333;
+  --COLOR_WHITE: #fff;
+  --COLOR_ACCENT: #005931;
+
+  --FONT_SIZE: 1.4rem;
+
+  --FONT_WEIGHT: 500;
+  --FONT_WEIGHT_BOLD: 700;
+
+  --FONT_FAMILY: "Zen Kaku Gothic New", sans-serif;
+  --FONT_FAMILY_SUB: "Anton SC", sans-serif;
+
+  --LINE_HEIGHT: 1.75;
+  --LINE_HEIGHT_HEADING: 1.5;
+
+  --ROUND: 16px;
+  --ROUND_S: 8px;
+
+  --MARGIN_MODULES: 24px;
+
+  --HEADER_HEIGHT: calc(64px + 24px);
+  --CONTENT_PADDING_BLOCK: 40px;
+  --CONTENT_PADDING_INLINE: 16px;
+  --CONTENT_WIDTH_SP: 320px;
+  --CONTENT_WIDTH_PC: 1200px;
+  --CONTENT_WIDTH_OUTER: calc(1200px + calc(var(--CONTENT_PADDING_INLINE) * 2));
+
+  --OPACITY: .5;
+  --TRANSITION: .2s;
+
+  --ZINDEX_OVERLAY: 5000;
+  --ZINDEX_HEADER: 2000;
+  --ZINDEX_PAGE_TOP: 1000;
+  --ZINDEX_LAYER4: 20;
+  --ZINDEX_LAYER3: 15;
+  --ZINDEX_LAYER2: 10;
+  --ZINDEX_LAYER1: 5;
+  --ZINDEX_DEFAULT: 0;
+  --ZINDEX_BEHIND: -1
+}
+
+@media(768px <= width) {
+  :root {
+    --FONT_SIZE: 1.6rem;
+    --MARGIN_MODULES: 48px;
+    --CONTENT_PADDING_BLOCK: 72px;
+    --CONTENT_PADDING_INLINE: 40px;
+  }
+}

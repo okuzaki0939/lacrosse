@@ -1,0 +1,48 @@
+@use '../../base/' as *;
+
+.media-layout {
+  margin-block-start: var(--MARGIN_MODULES);
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 16px;
+}
+
+.media-layout__content {
+  flex: 1 1 auto;
+}
+
+.media-layout__title {
+  font-size: 3.2rem;
+  font-weight: var(--FONT_WEIGHT_BOLD);
+}
+
+.media-layout__textContainer {
+  > :first-child {
+    margin-block-start: 0;
+  }
+}
+
+.media-layout__media {
+  border-radius: var(--ROUND);
+  overflow: hidden;
+}
+
+.media-layout__mediaItem {
+  width: 100%;
+}
+
+@media(768px <= width) {
+  .media-layout {
+    flex-direction: row;
+    gap: 48px;
+
+    &--rowReversePC {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .media-layout__media {
+    flex: 0 0 auto;
+    max-width: 50%;
+  }
+}

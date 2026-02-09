@@ -1,0 +1,37 @@
+@use '../../base/' as *;
+
+.list-sns {
+  margin-block-start: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.list-sns__link {
+  display: grid;
+  place-content: center;
+  background-color: var(--COLOR_WHITE);
+  border-radius: var(--ROUND_S);
+  width: 56px;
+  height: 56px;
+  aspect-ratio: 1 / 1;
+}
+
+.list-sns__icon {
+  max-width: 40px;
+}
+
+@media(768px <= width) {
+  .list-sns {
+    margin-block-start: 40px;
+  }
+
+  .list-sns__link {
+    width: 80px;
+    height: 80px;
+  }
+
+  .list-sns__icon {
+    max-width: none;
+  }
+}

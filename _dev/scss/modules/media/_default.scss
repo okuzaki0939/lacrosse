@@ -1,0 +1,11 @@
+@use '../../base/' as *;
+
+.media {
+  margin-block-start: var(--MARGIN_MODULES);
+}
+
+.media__item {
+  width: 100%;
+  border-radius: var(--ROUND);
+  object-fit: cover;
+}
