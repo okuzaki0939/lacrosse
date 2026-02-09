@@ -481,7 +481,7 @@ button {
 .section--event::after {
   position: absolute;
   content: "";
-  background-image: url("/common/img/bg-event.svg");
+  background-image: url("/lacrosse/common/img/bg-event.svg");
   background-size: cover;
   background-position: top;
   width: 100%;
@@ -490,7 +490,7 @@ button {
 }
 
 .section--contact {
-  background-image: url("/common/img/bg-contact.webp");
+  background-image: url("/lacrosse/common/img/bg-contact.webp");
   background-size: cover;
   background-position: center;
 }
@@ -532,7 +532,7 @@ button {
     padding-block: 64px;
   }
   .section--event::after {
-    background-image: url("/common/img/bg-event-l.svg");
+    background-image: url("/lacrosse/common/img/bg-event-l.svg");
   }
   .section--event .section__inner {
     padding-block: 24px;
